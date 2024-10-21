@@ -28,11 +28,12 @@ function App() {
     // Set thời gian thông báo
     const setAlert = (message, variant) => {
         dispatch({ type: SET_ALERT, payload: { message, variant } });
-        setTimeout(() => dispatch({ type: CLEAR_ALERT }), 500);
+        setTimeout(() => dispatch({ type: CLEAR_ALERT }), 800);
     };
 
     // Add thêm student
     const addStudent = () => {
+        // check valid
         const namePattern = /^[A-Za-z\s]+$/;
 
         if (!newStudent.name || !newStudent.code) {
